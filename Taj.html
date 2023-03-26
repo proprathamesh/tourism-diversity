@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Heading</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <h2>Taj Mahal<span style="color: rgb(255, 149, 0);"><b>.</b></span> </strong></h2>
+            <ul>
+                <li style="color: #ff7657;"><a href="/" class="links" style = "text-decoration: none; color:#ff7657">Home</a></li>
+                <li style="color: #ff7657;"><a href="https://www.incredibleindia.org/content/incredible-india-v2/en.html#modal" class="links" style = "text-decoration: none;">Ministry</a></li>
+                <li style="color: #ff7657;"><a href="https://www.incredibleindia.org/content/incredible-india-v2/en/destinations/munnar.html" class="links" style = "text-decoration: none;">Read more</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="glowing">        
+        <span style="--i:1;"></span>    
+        <span style="--i:2;"></span>        
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+    </div>
+    <div class="glowing">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+    </div>
+    <div class="glowing">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+    </div>
+    <div class="glowing">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+    </div>
+
+    <div class="box">
+        <div class='slide' style="height: 600px;">
+            <img src="https://source.unsplash.com/1000x600/?Taj" alt="" />
+        </div>
+        <div class='slide' style="height: 600px;">
+            <img src="https://source.unsplash.com/1000x600/?Taj Mahal" alt="" />
+        </div>
+        <div class='slide' style="height: 600px;">
+            <img src="https://source.unsplash.com/1000x600/?TajMahal" alt="" />
+        </div>
+        <div class="para" style="font-size: 20px;opacity: 0.7; letter-spacing: 2px;margin-top: 50px;">
+
+            <p style="margin-bottom: 10px;">India is a remarkable tourist destination that offers a plethora of experiences to travellers. From the grandiose Taj Mahal, one of the wonders of the world, to opulent palaces and forts, India displays a variety of heritage riches that were crafted hundreds of years ago.</p>
+                
+                 <p style="margin-bottom: 10px;">As its bustling bazaars promise to give you the shopping experience of a lifetime, its serene natural retreats assure a scenic respite from the din. The various wildlife sanctuaries and national parks, along with adventure sports opportunities add to the thrill of a holiday.</p><p style="margin-bottom: 10px;"> India is a delightful place with lots to explore and discover. As you script your odyssey travelling through the country, be prepared to be awed by the splendour of the country that beckons time and again.</p><p style="margin-bottom: 10px;"> Mughal emperor Shah Jahan, the creator of the Taj Mahal, said that the beauty of the monument made “the sun and the moon shed tears from their eyes”. It has also been described as a “teardrop on the cheek of eternity” by Nobel laureate Rabindranath Tagore.</p>
+
+                 <p style="margin-bottom: 10px;">Every year, thousands of tourists from around the world make a beeline for this breathtakingly ethereal marble monument, considerd by many as the most beautiful building constructed by man. The monument was built as a memorial by Mughal emperor Shah Jahan for his deceased wife, Mumtaz Mahal.</p>
+            </div>
+    </div>
+</body>
+
+
+<script>
+    let num = 0;
+    let set = () => {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        console.log(slides.length);
+        num++;
+        if (num >= slides.length) {
+            num = 0;
+        }
+        for( i=0 ; i<slides.length ; i++){
+            slides[i].style.display = "none";
+        }
+        slides[num].style.display = "block";
+        setTimeout(set, 5000);
+    }
+    set();
+</script>
+</html>

@@ -1,0 +1,266 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar {
+  background-color: #00000000;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.slide button{
+    width: 50px;
+    height: 50px;
+    margin: 4px;
+    background-color: #00000000;
+    border: 0px;
+    cursor: pointer;
+    color: white;
+}
+
+.container{
+    min-width: 1000px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container h2{
+    font-size: 30px;
+    font-weight: bold;
+    transition: color 0.25s ease-out 100ms;
+}
+
+.container ul {
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    flex-direction: row;
+}
+
+.links {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px 20px;
+    padding: 10px 10px;
+    font-family: monospace;
+    font-size: 21px;
+    font-weight: 500;
+    transition: color 0.25s ease-out 100ms;
+}
+
+.container h2:hover {
+    cursor: pointer;
+    color: #ff7657;
+}
+
+.links:hover {
+    cursor: pointer;
+    color: #ff7657;
+}
+
+.links {
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.box{
+    font-family: pb;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    width: 80%;
+    color: white;
+}
+
+.must{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    position: relative;
+    height: 800px;
+    width: 100%;
+    align-items: center;
+}
+
+.must h1{
+    width: 100%;
+    font-size: 50px;
+    color: #ff7657;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.heading{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 0px 60px;
+    font-size: 20px;
+}
+
+.heading h1{
+    margin-bottom: 30px;
+    font-size: 50px;
+    color: #ff7657;
+    letter-spacing: 3px;
+}
+
+
+
+.slide {
+  animation: fade 1.5s ease-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: #000000f0;
+  overflow-x: hidden;
+  font-family: pb;
+}
+
+.glowing {
+  position: relative;
+  min-width: 700px;
+  height: 550px;
+  margin: -150px;
+  transform-origin: right;
+  animation: colorChange 5s linear infinite;
+}
+
+.glowing:nth-child(even) {
+  transform-origin: left;
+}
+
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.glowing span {
+  margin: 3px;
+  position: absolute;
+  top: calc(80px * var(--i));
+  left: calc(80px * var(--i));
+  bottom: calc(80px * var(--i));
+  right: calc(80px * var(--i));
+  opacity: 0.4;
+}
+
+.glowing span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  background: #f00;
+  border-radius: 50%;
+}
+
+.glowing span:nth-child(3n + 1)::before {
+  background: rgba(134, 255, 0, 1);
+  box-shadow: 0 0 20px rgba(134, 255, 0, 1), 0 0 40px rgba(134, 255, 0, 1),
+    0 0 60px rgba(134, 255, 0, 1), 0 0 80px rgba(134, 255, 0, 1),
+    0 0 0 8px rgba(134, 255, 0, 0.1);
+}
+
+.glowing span:nth-child(3n + 2)::before {
+  background: rgba(255, 214, 0, 1);
+  box-shadow: 0 0 20px rgba(255, 214, 0, 1), 0 0 40px rgba(255, 214, 0, 1),
+    0 0 60px rgba(255, 214, 0, 1), 0 0 80px rgba(255, 214, 0, 1),
+    0 0 0 8px rgba(255, 214, 0, 0.1);
+}
+
+.glowing span:nth-child(3n + 3)::before {
+  background: rgba(0, 226, 255, 1);
+  box-shadow: 0 0 20px rgba(0, 226, 255, 1), 0 0 40px rgba(0, 226, 255, 1),
+    0 0 60px rgba(0, 226, 255, 1), 0 0 80px rgba(0, 226, 255, 1),
+    0 0 0 8px rgba(0, 226, 255, 0.1);
+}
+
+.glowing span:nth-child(3n + 1) {
+  animation: animate 10s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 2) {
+  animation: animate-reverse 5s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 3) {
+  animation: animate 8s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 4) {
+  animation: animate-reverse 3s alternate infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}

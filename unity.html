@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Heading</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <h2>Statue of Unity<span style="color: rgb(255, 149, 0);"><b>.</b></span> </strong></h2>
+            <ul>
+                <li style="color: #ff7657;"><a href="/" class="links" style = "text-decoration: none; color:#ff7657">Home</a></li>
+                <li style="color: #ff7657;"><a href="https://www.incredibleindia.org/content/incredible-india-v2/en.html#modal" class="links" style = "text-decoration: none;">Ministry</a></li>
+                <li style="color: #ff7657;"><a href="https://www.incredibleindia.org/content/incredible-india-v2/en/destinations/vadodara/statue-of-unity.html" class="links" style = "text-decoration: none;">Read more</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div class='slide'>
+        <img src="https://source.unsplash.com/2000x700/?nature" alt="" />
+    </div>
+    <div class='slide'>
+        <img src="https://source.unsplash.com/2000x700/?nature, tree" alt="" />
+    </div>
+    <div class='slide'>
+        <img src="https://source.unsplash.com/2000x700/?nature, water" alt="" />
+    </div> -->
+
+    <div class="glowing">        
+        <span style="--i:1;"></span>    
+        <span style="--i:2;"></span>        
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+    </div>
+    <div class="glowing">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+    </div>
+    <div class="glowing">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+    </div>
+    <div class="glowing">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+    </div>
+
+    <div class="box">
+        <div class='slide' style="height: 600px;">
+            <img src="https://www.deccanherald.com/sites/dh/files/article_images/2020/05/19/file72kca7re047ujfvc2do-1017802106-1566537567.jpg" alt="" />
+        </div>
+        <!-- <div class='slide'>
+            <img src="https://source.unsplash.com/2000x700/?statue, unity" alt="" />
+        </div>
+        <div class='slide'>
+            <img src="https://source.unsplash.com/2000x700/?statue, unity" alt="" />
+        </div> -->
+        <div class="para" style="font-size: 20px;opacity: 0.7; letter-spacing: 2px;margin-top: 50px;">
+
+            <p style="margin-bottom: 10px;">It’s huge, almost gigantic! That is the first reaction most people have as they speed down the winding road leading to the towering Statue of Unity (SoU). A long bridge connects the mainland to the Sadhu Bet Island, on which the statue stands. Silhouetted against the surrounding Vindhya and Satpura mountain ranges, the colossal statue almost seems to pierce the skyline.</p>
+                
+                 <p style="margin-bottom: 10px;">The legacy of Sardar Vallabhbhai Patel, India’s Iron Man, lives on in the form of this massive statue dominating the Narmada river basin. He towers over the landscape, as if, keeping an eye over the land he helped become independent. Standing at a height of 182 m, the Statue of Unity, is the tallest in the world. It depicts Sardar Patel in a walking pose, clad in his characteristic simple attire.</p><p style="margin-bottom: 10px;"> About 100 times the height of a five-and-a-half-ft-tall person, one can see the statue from as far away as 8 km. The SoU was inaugurated on October 31, 2018, by Prime Minister Narendra Modi to commemorate Patel’s 143rd birth anniversary.
+                
+                The statue has been built on a star-shaped geometric base that covers the entire Sadhu Hill.</p><p style="margin-bottom: 10px;"> It has a viewing gallery at 135 m, at the statue’s chest level, that can be reached via two high-speed elevators. The gateway to the elevators is through an exhibition gallery, in which you can marvel at a model of the statue and an elaborate blueprint, among other exhibits. The elevators travel 150 m in half a minute and can carry 26 people at one time. From the viewing gallery, reinforced with steel grids, you can take in the breathtaking views of the surroundings and of the Sardar Sarovar reservoir at a distance.</p><p style="margin-bottom: 10px;"> Interestingly, it’s not just the statue that throws light on Patel’s life and achievements, but also a spectacular laser show, which talks in detail about the statesman’s life. It traces the life of Patel and talks about why the statue has been erected in his honour. The show also outlines the leader’s contribution to the nation. However, what really fascinates are the realistic projections that show Patel in different phases of his life: in a lawyer’s garb, images from his ‘Bharat Chodo’ movement (asking the British to leave India) and in his characteristic kurta pajama.</p>
+            </div>
+    </div>
+</body>
+
+
+<script>
+    let num = 0;
+    let set = () => {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        // console.log(slides.length);
+        num++;
+        if (num >= slides.length) {
+            return
+        }
+        for( i=0 ; i<slides.length ; i++){
+            slides[i].style.display = "none";
+        }
+        slides[++num].style.display = "block";
+        setTimeout(set, 5000);
+    }
+    set();
+</script>
+</html>
